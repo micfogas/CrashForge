@@ -1,10 +1,10 @@
 #!/bin/sh
-EXE=creator3-arm
-KERNEL=uImage-creator3*
-LOG=creator3-log-pwn.log
-M3HEX=Creator3.hex
+EXE=guider2-arm
+KERNEL=uImage-guider2*
+LOG=guider2-log-pwn.log
+M3HEX=Guider2.hex
 MYDAEMON=mydaemon.out
-MACHINE=creator3
+MACHINE=guider2
 PID=0004
 MACHINE_ARCH=armv5tejl
 

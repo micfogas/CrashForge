@@ -1,9 +1,9 @@
 #!/bin/sh
 
-EXE=creator3-arm
+EXE=guider2-arm
 UNVS=universal-arm
 PID=000C
-QTAPP="/opt/flashforge/exe/creator3"
+QTAPP="/opt/flashforge/exe/guider2"
 OLD_QTAPP=${QTAPP}"-arm"
 #ifconfig eth0 10.33.23.146
 udhcpc -i eth0 &
@@ -43,13 +43,13 @@ do
 	  else
 	  ls -1t /mnt/creator3*.zip
 		if [ $? -eq 0 ];then
-			UPDATEFILE=`ls -1t /mnt/creator3*.zip | head -n 1`
+			UPDATEFILE=`ls -1t /mnt/guider2*.zip | head -n 1`
 			if [ -f $UPDATEFILE ];then
 				echo "find update file: ${UPDATEFILE}"
 				rm -rf /data/update
 				cp -a ${UPDATEFILE} /data/
 				if [ $? -ne 0 ];then
-					rm -rf /data/creator3*.zip
+					rm -rf /data/guider2*.zip
 					sync
 					umount /mnt
 					break
@@ -128,7 +128,7 @@ rm -rf /data/update/*
 export PATH=/opt/curl/bin:$PATH
 export LD_LIBRARY_PATH=/opt/curl/lib:$LD_LIBRARY_PATH
 export LD_LIBRARY_PATH=/opt/arm-jsoncpp/lib:$LD_LIBRARY_PATH
-export LD_LIBRARY_PATH=/opt/mjpg-streamer/lib:$LD_LIBRARY_PATH
+#export LD_LIBRARY_PATH=/opt/mjpg-streamer/lib:$LD_LIBRARY_PATH
 #/opt/mjpg-streamer/bin/mjpg_streamer -i "input_uvc.so -r 1280x1024 -f 30" -o "output_file.so -f /data/pics -d 15000" -o "output_http.so -w /opt/mjpg-streamer/www" &
 
 export PATH=$WORK_DIR/bin:$PATH

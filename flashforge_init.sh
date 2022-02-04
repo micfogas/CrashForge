@@ -18,9 +18,9 @@ echo "WORKDIR="$WORKDIR >> $LOG
 
 # Tell user to wait on LCD
 echo "Display wait on lcd" >> $LOG
-if [ -f $WORKDIR/images/start.bmp ]
+if [ -f $WORKDIR/start.bmp ]
 then
-  cat $WORKDIR/images/start.bmp > /dev/fb0
+  cat $WORKDIR/start.bmp > /dev/fb0
 fi
 
 # Reset root pw
@@ -127,9 +127,9 @@ sync
 
 # Tell user it's done on LCD
 echo "Display pwnd on lcd" >> $LOG
-if [ -f $WORKDIR/images/complete.bmp ]
+if [ -f $WORKDIR/complete.bmp ]
 then
-  cat $WORKDIR/images/complete.bmp > /dev/fb0
+  cat $WORKDIR/complete.bmp > /dev/fb0
 fi
 
 sleep 5

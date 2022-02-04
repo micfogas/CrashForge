@@ -1,8 +1,5 @@
 #!/bin/sh
 
-EXE=guider2-arm
-UNVS=universal-arm
-PID=000C
 QTAPP="/opt/flashforge/exe/guiderII"
 OLD_QTAPP=${QTAPP}"-arm"
 NEW_QTAPP=${QTAPP}".bin "

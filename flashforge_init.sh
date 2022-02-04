@@ -137,10 +137,10 @@ sleep 5
 # TSLIB
 echo "export tslib" >> $LOG
 export LD_LIBRARY_PATH=/opt/tslib-1.4-none/lib:$LD_LIBRARY_PATH
-if [ -f $WORKDIR/music/play ]; then
+if [ -f $WORKDIR/play ]; then
 	echo "play complete music" >> $LOG
-	chmod a+x $WORKDIR/music/play
-	$WORKDIR/music/play -qws
+	chmod a+x $WORKDIR/play
+	$WORKDIR/play -qws
 fi
 
 halt -f

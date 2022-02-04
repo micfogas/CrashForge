@@ -10,13 +10,13 @@
 # possible, but leave them commented.  Uncommented options override the
 # default value.
 
-#Port 22
+Port 22
 #AddressFamily any
 #ListenAddress 0.0.0.0
 #ListenAddress ::
 
 # The default requires explicit activation of protocol 1
-#Protocol 2
+Protocol 2
 
 # HostKey for protocol version 1
 #HostKey /etc/ssh/ssh_host_key
@@ -69,8 +69,8 @@ PermitRootLogin yes
 #IgnoreRhosts yes
 
 # To disable tunneled clear text passwords, change to no here!
-#PasswordAuthentication yes
-#PermitEmptyPasswords no
+PasswordAuthentication yes
+PermitEmptyPasswords no
 
 # Change to no to disable s/key passwords
 #ChallengeResponseAuthentication yes
@@ -103,7 +103,7 @@ PermitRootLogin yes
 #X11DisplayOffset 10
 #X11UseLocalhost yes
 #PermitTTY yes
-#PrintMotd yes
+PrintMotd no
 #PrintLastLog yes
 #TCPKeepAlive yes
 #UseLogin no
@@ -120,7 +120,7 @@ UsePrivilegeSeparation sandbox		# Default for new installations.
 #VersionAddendum none
 
 # no default banner path
-#Banner none
+Banner none
 
 # override default of no subsystems
 Subsystem	sftp	/usr/libexec/sftp-server
